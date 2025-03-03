@@ -4,46 +4,81 @@ import { defineProps } from 'vue';
 defineProps({
   carName: String,
   carBrand: String,
-  carPrice: Number
+  carEngine: String,
+  carTransmission: String,
+  carTopSpeed: Number,
+  CarYear: Number,
+  carPrice: Number,
 })
+
+const formatPrice = (price: number) => {
+  return price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+const formatCarTransmission = (transmission: string) => {
+  return transmission === 'manual' ? 'Manual' : 'Automático';
+}
 </script>
 
 <template>
-  <div class="car-card">
-    <div class="car-info">
+  <div class="card">
+    <div class="card-info">
       <h1>{{ carName }}</h1>
       <p>{{ carBrand }}</p>
-      <p>R$ {{ carPrice }}</p>
+      <p>{{ carEngine }}</p>
+      <p>{{ formatCarTransmission(carTransmission) }}</p>
+      <p>{{ carTopSpeed }} km/h</p>
+      <p>{{ CarYear }}</p>
+      <p>{{ formatPrice(carPrice) }}</p>
     </div>
     <button>Ver mais</button>
   </div>
 </template>
 
 <style scoped>
-.car-card {
-  width: 200px;
-  border: 2px solid #FFD700;
-  border-radius: 8px;  height: 200px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #F5F5F5;
-  color: #222222;
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
+.card {
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
 }
 
-.car-info {
-  text-align: center;
+.card:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #FFD700;
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
   border: none;
-  border-radius: 0 0 8px 8px;
-  cursor: pointer;
-  color: #222222;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+h1 {
+  font-size: 1.5em;
   font-weight: bold;
+}
+p {
+  color: rgb(134, 134, 134);
 }
 </style>
