@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
+import { useRouter } from 'vue-router';
 
 defineProps({
+  carId: String,
   carName: String,
   carBrand: String,
   carEngine: String,
@@ -11,12 +13,18 @@ defineProps({
   carPrice: Number,
 })
 
+const router = useRouter()
+
 const formatPrice = (price: number) => {
   return price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
 const formatCarTransmission = (transmission: string) => {
   return transmission === 'manual' ? 'Manual' : 'Automático';
+}
+
+const goToCarDetails = (id: string) => {
+  router.push(`/cars/${id}`)
 }
 </script>
 
@@ -31,7 +39,7 @@ const formatCarTransmission = (transmission: string) => {
       <p>{{ CarYear }}</p>
       <p>{{ formatPrice(carPrice) }}</p>
     </div>
-    <button>Ver mais</button>
+    <button @click="goToCarDetails(carId)">Ver mais</button>
   </div>
 </template>
 
