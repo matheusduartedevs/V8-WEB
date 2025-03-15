@@ -5,6 +5,8 @@ import { formatEngine, formatPrice, formatTransmission } from '@/utils/carsFunct
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
+import ArrowBack from '@/assets/arrow-back.png';
+
 const car = ref<ICars>()
 const carsService = new CarsService()
 const route = useRoute()
@@ -27,6 +29,7 @@ onMounted(() => {
 
 <template>
   <div class="car">
+    <img :src="ArrowBack" alt="Icone de voltar" class="back-icon" @click="$router.back()" />
     <div class="car-details">
       <div class="car-title">
         <h1 class="car-name">{{ car?.car_name }}</h1>
@@ -64,8 +67,7 @@ onMounted(() => {
 <style scoped>
 .car {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  flex-direction: column;
   max-width: 900px;
   height: 900px;
   margin: 50px auto;
@@ -138,5 +140,10 @@ h1 {
 p {
   margin: 5px 0;
   font-size: 16px;
+}
+
+.back-icon {
+  width: 50px;
+  cursor: pointer;
 }
 </style>
