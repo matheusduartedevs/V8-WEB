@@ -24,7 +24,7 @@ const goToCarDetails = (id: string) => {
 <template>
   <div class="card">
     <div class="card-info">
-      <h1>{{ carName }}</h1>
+      <h1 class="car-name">{{ carName }}</h1>
       <p>{{ carBrand }}</p>
       <p>{{ carEngine }}</p>
       <p>{{ formatTransmission(carTransmission || '') }}</p>

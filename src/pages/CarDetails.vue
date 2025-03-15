@@ -28,12 +28,35 @@ onMounted(() => {
 <template>
   <div class="car">
     <div class="car-details">
-      <h1>{{ car?.car_name }}</h1>
-      <p><strong>Marca:</strong> {{ car?.car_brand }}</p>
-      <p><strong>Velocidade Máxima:</strong> {{ car?.car_top_speed }} km/h</p>
-      <p><strong>Motor:</strong> {{ car?.car_engine }}</p>
-      <p><strong>Transmissão:</strong> {{ formatTransmission(car?.car_transmission || "") }}</p>
-      <p><strong>Preço: </strong>{{ formatPrice(Number(car?.car_price) || 0) }}</p>
+      <div class="car-title">
+        <h1 class="car-name">{{ car?.car_name }}</h1>
+        <p class="car-description">{{ car?.car_description }}</p>
+      </div>
+
+      <div class="car-specifications">
+        <p>
+          <strong>Marca</strong> 
+          <span>{{ car?.car_brand }}</span>
+        </p>
+        <p>
+          <strong>Velocidade Máxima</strong> 
+          <span>{{ car?.car_top_speed }} km/h</span>
+        </p>
+        <p>
+          <strong>Motor</strong> 
+          <span>{{ car?.car_engine }}</span>
+        </p>
+        <p>
+          <strong>Transmissão</strong> 
+          <span>{{ formatTransmission(car?.car_transmission || "") }}</span>
+        </p>
+      </div>
+
+      <div class="car-price">
+        <p>
+          <span>{{ formatPrice(Number(car?.car_price) || 0) }}</span>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -41,7 +64,7 @@ onMounted(() => {
 <style scoped>
 .car {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 40px;
   max-width: 900px;
   height: 900px;
@@ -60,8 +83,51 @@ onMounted(() => {
 }
 
 .car-details {
-  flex: 1; 
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+
+.car-name {
+  font-size: 5rem;
+}
+
+.car-description {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.car-specifications {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.car-specifications p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.car-specifications strong {
+  text-align: left;
+}
+
+.car-specifications span {
+  text-align: right;
+}
+
+.car-price {
+  margin-top: 5rem;
+  text-align: center;
+  
+  p {
+    font-size: 2.5rem;
+  }
 }
 
 h1 {
