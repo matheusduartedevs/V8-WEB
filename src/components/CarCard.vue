@@ -38,7 +38,7 @@ const goToCarDetails = (id: string) => {
 
 <style scoped>
 .card {
-  width: 190px;
+  width: 210px;
   height: 254px;
   border-radius: 20px;
   background: #f5f5f5;
@@ -78,6 +78,7 @@ button {
 h1 {
   font-size: 1.5em;
   font-weight: bold;
+  white-space: nowrap;
 }
 p {
   color: rgb(134, 134, 134);
