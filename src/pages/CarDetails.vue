@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import CarsService from '@/services/cars';
 import type { ICars } from '@/types/cars';
-import { formatPrice, formatTransmission } from '@/utils/carsFunctions';
+import { formatEngine, formatPrice, formatTransmission } from '@/utils/carsFunctions';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
@@ -44,7 +44,7 @@ onMounted(() => {
         </p>
         <p>
           <strong>Motor</strong> 
-          <span>{{ car?.car_engine }}</span>
+          <span>{{ formatEngine(car?.car_engine || "") }}</span>
         </p>
         <p>
           <strong>Transmissão</strong> 

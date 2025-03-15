@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { formatPrice, formatTransmission } from '@/utils/carsFunctions';
+import { formatEngine, formatPrice, formatTransmission } from '@/utils/carsFunctions';
 import { defineProps } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -26,7 +26,7 @@ const goToCarDetails = (id: string) => {
     <div class="card-info">
       <h1 class="car-name">{{ carName }}</h1>
       <p>{{ carBrand }}</p>
-      <p>{{ carEngine }}</p>
+      <p>{{ formatEngine(carEngine || "") }}</p>
       <p>{{ formatTransmission(carTransmission || '') }}</p>
       <p>{{ carTopSpeed }} km/h</p>
       <p>{{ CarYear }}</p>

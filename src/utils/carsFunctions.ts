@@ -5,3 +5,7 @@ export const formatTransmission = (transmission: string) => {
 export const formatPrice = (price: number) => {
   return price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
+
+export const formatEngine = (engine: string) => {
+  return engine === 'Electric' ? 'Elétrico' : engine;
+}
