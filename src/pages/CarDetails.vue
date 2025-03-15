@@ -1,22 +1,7 @@
-<template>
-  <div class="car">
-    <div class="car-image">
-      <img :src="car?.car_image" :alt="car?.car_name">
-    </div>
-    <div class="car-details">
-      <h1>{{ car?.car_name }}</h1>
-      <p><strong>Marca:</strong> {{ car?.car_brand }}</p>
-      <p><strong>Velocidade Máxima:</strong> {{ car?.car_top_speed }} km/h</p>
-      <p><strong>Motor:</strong> {{ car?.car_engine }}</p>
-      <p><strong>Transmissão:</strong> {{ car?.car_transmission }}</p>
-      <p><strong>Preço:</strong> R$ {{ car?.car_price }}</p>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import CarsService from '@/services/cars';
 import type { ICars } from '@/types/cars';
+import { formatPrice, formatTransmission } from '@/utils/carsFunctions';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
@@ -25,7 +10,7 @@ const carsService = new CarsService()
 const route = useRoute()
 
 const fetch = async () => {
-  const id = route.params.id
+  const id = Number(route.params.id)
   try {
     const data = await carsService.getCarById(id)
     car.value = data
@@ -39,6 +24,20 @@ onMounted(() => {
 })
 
 </script>
+
+<template>
+  <div class="car">
+    <div class="car-details">
+      <h1>{{ car?.car_name }}</h1>
+      <p><strong>Marca:</strong> {{ car?.car_brand }}</p>
+      <p><strong>Velocidade Máxima:</strong> {{ car?.car_top_speed }} km/h</p>
+      <p><strong>Motor:</strong> {{ car?.car_engine }}</p>
+      <p><strong>Transmissão:</strong> {{ formatTransmission(car?.car_transmission || "") }}</p>
+      <p><strong>Preço: </strong>{{ formatPrice(Number(car?.car_price) || 0) }}</p>
+    </div>
+  </div>
+</template>
+
 <style scoped>
 .car {
   display: flex;
