@@ -91,7 +91,7 @@ onMounted(() => {
 }
 
 .car-name {
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .car-description {
@@ -109,7 +109,7 @@ onMounted(() => {
 .car-specifications p {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
   width: 100%;
