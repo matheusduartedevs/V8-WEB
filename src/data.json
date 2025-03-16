@@ -1,0 +1,156 @@
+[
+  {
+      "car_id": 1,
+      "car_name": "Model S",
+      "car_brand": "Tesla",
+      "car_top_speed": 322,
+      "car_transmission": "automatic",
+      "car_engine": "Electric",
+      "car_year": 2023,
+      "car_price": "459999.94",
+      "car_description": "Sedan elétrico de luxo com recursos avançados e alto desempenho."
+  },
+  {
+      "car_id": 2,
+      "car_name": "Mustang GT",
+      "car_brand": "Ford",
+      "car_top_speed": 250,
+      "car_transmission": "manual",
+      "car_engine": "5.0L V8",
+      "car_year": 2022,
+      "car_price": "321999.94",
+      "car_description": "Caro de alto desempenho com motor V8 potente."
+  },
+  {
+      "car_id": 3,
+      "car_name": "Civic Type R",
+      "car_brand": "Honda",
+      "car_top_speed": 272,
+      "car_transmission": "manual",
+      "car_engine": "2.0L Turbo",
+      "car_year": 2023,
+      "car_price": "252999.94",
+      "car_description": "Hatchback esportivo com motor turboalimentado e condução ágil."
+  },
+  {
+      "car_id": 4,
+      "car_name": "Camaro SS",
+      "car_brand": "Chevrolet",
+      "car_top_speed": 290,
+      "car_transmission": "manual",
+      "car_engine": "6.2L V8",
+      "car_year": 2021,
+      "car_price": "281749.94",
+      "car_description": "Carro de muscle americano com design agressivo e motor V8."
+  },
+  {
+      "car_id": 5,
+      "car_name": "911 Turbo",
+      "car_brand": "Porsche",
+      "car_top_speed": 330,
+      "car_transmission": "automatic",
+      "car_engine": "3.8L Twin-Turbo",
+      "car_year": 2022,
+      "car_price": "1006249.94",
+      "car_description": "Carro esportivo de luxo com motor twin-turboalimentado e desempenho dinâmico."
+  },
+  {
+      "car_id": 6,
+      "car_name": "Aventador",
+      "car_brand": "Lamborghini",
+      "car_top_speed": 350,
+      "car_transmission": "automatic",
+      "car_engine": "6.5L V12",
+      "car_year": 2020,
+      "car_price": "2299999.94",
+      "car_description": "Supercarro italiano com motor V12 e excepcional velocidade máxima."
+  },
+  {
+      "car_id": 7,
+      "car_name": "Corolla GR",
+      "car_brand": "Toyota",
+      "car_top_speed": 250,
+      "car_transmission": "manual",
+      "car_engine": "1.6L Turbo",
+      "car_year": 2023,
+      "car_price": "212749.94",
+      "car_description": "Sedan esportivo compacto com motor turboalimentado e dirigibilidade precisa."
+  },
+  {
+      "car_id": 8,
+      "car_name": "Challenger SRT",
+      "car_brand": "Dodge",
+      "car_top_speed": 320,
+      "car_transmission": "manual",
+      "car_engine": "6.2L Supercharged V8",
+      "car_year": 2021,
+      "car_price": "419249.94",
+      "car_description": "Carro muscle poderoso com V8 superalimentado e design marcante."
+  },
+  {
+      "car_id": 9,
+      "car_name": "M3 Competition",
+      "car_brand": "BMW",
+      "car_top_speed": 290,
+      "car_transmission": "automatic",
+      "car_engine": "3.0L Twin-Turbo",
+      "car_year": 2023,
+      "car_price": "436499.94",
+      "car_description": "Sedan M Performance com motor turboalimentado e dinâmica de direção emocionante."
+  },
+  {
+      "car_id": 10,
+      "car_name": "A4 Quattro",
+      "car_brand": "Audi",
+      "car_top_speed": 250,
+      "car_transmission": "automatic",
+      "car_engine": "2.0L Turbo",
+      "car_year": 2022,
+      "car_price": "258749.94",
+      "car_description": "Sedan esportivo com tração integral e motor turboalimentado eficiente."
+  },
+  {
+      "car_id": 11,
+      "car_name": "GT-R Nismo",
+      "car_brand": "Nissan",
+      "car_top_speed": 330,
+      "car_transmission": "automatic",
+      "car_engine": "3.8L Twin-Turbo",
+      "car_year": 2021,
+      "car_price": "1207500.00",
+      "car_description": "Carro esportivo de alto desempenho com motor twin-turboalimentado e dirigibilidade precisa."
+  },
+  {
+      "car_id": 12,
+      "car_name": "Model 3 Performance",
+      "car_brand": "Tesla",
+      "car_top_speed": 261,
+      "car_transmission": "automatic",
+      "car_engine": "Electric",
+      "car_year": 2023,
+      "car_price": "344999.94",
+      "car_description": "Sedan elétrico que oferece desempenho impressionante e tecnologia avançada."
+  },
+  {
+      "car_id": 13,
+      "car_name": "RS5 Sportback",
+      "car_brand": "Audi",
+      "car_top_speed": 280,
+      "car_transmission": "automatic",
+      "car_engine": "2.9L Twin-Turbo",
+      "car_year": 2022,
+      "car_price": "477749.94",
+      "car_description": "Sedan de luxo esportivo com motor twin-turboalimentado e experiência de direção superior."
+  },
+  {
+      "car_id": 14,
+      "car_name": "Fusca",
+      "car_brand": "Volkswagen",
+      "car_top_speed": 140,
+      "car_transmission": "manual",
+      "car_engine": "1.6L Boxer",
+      "car_year": 1975,
+      "car_price": "25000.00",
+      "car_description": "Carro compacto clássico com design simples e motor modesto."
+  }
+]
